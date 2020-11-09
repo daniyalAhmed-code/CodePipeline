@@ -16,3 +16,6 @@ phases:
   post_build:
     commands:
       - echo "we are done with the build"
+artifacts:
+  files:
+    - '**/*'
