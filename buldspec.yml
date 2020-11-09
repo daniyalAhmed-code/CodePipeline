@@ -1,0 +1,18 @@
+verison 1.0
+
+phases:
+  install:
+    runtime-versions:
+      nodejs : 10
+    commands:
+      - echo "Installing Node"
+  pre_build:
+    commands:
+      - echo "This is the pre-build stage"
+  build:
+    commands:
+      - echo "In build block to check whether the word congrats is in file or not"
+      - grep -Fq "Congrats" index.html
+  post_build:
+    commands:
+      - echo "we are done with the build"
